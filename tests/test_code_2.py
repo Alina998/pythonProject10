@@ -1,5 +1,7 @@
 import pytest
+
 from utils.code_2 import get_mask_account
+
 
 @pytest.fixture
 def valid_account_numbers():
@@ -9,6 +11,7 @@ def valid_account_numbers():
         (98765432101234567890, "**7890"),
         (11112222333344445555, "**5555"),
     ]
+
 
 @pytest.fixture
 def invalid_account_numbers():
@@ -21,6 +24,7 @@ def invalid_account_numbers():
         "1234567890123456789",
     ]
 
+
 @pytest.mark.parametrize("account_number, expected_mask", [
     (12345678901234567890, "**7890"),
     (98765432101234567890, "**7890"),
@@ -28,6 +32,7 @@ def invalid_account_numbers():
 ])
 def test_valid_account_numbers(valid_account_numbers, account_number, expected_mask):
     assert get_mask_account(account_number) == expected_mask
+
 
 @pytest.mark.parametrize("account_number", [
     -12345678901234567890,

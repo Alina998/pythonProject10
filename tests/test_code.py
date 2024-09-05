@@ -1,5 +1,7 @@
 import pytest
+
 from utils.code import get_mask_card_number
+
 
 @pytest.fixture
 def valid_card_numbers():
@@ -9,6 +11,7 @@ def valid_card_numbers():
         (4000123412345678, "4000 12** **** 5678"),
         (5555555555554444, "5555 55** **** 4444"),
     ]
+
 
 @pytest.fixture
 def invalid_card_numbers():
@@ -20,6 +23,7 @@ def invalid_card_numbers():
         "abcd1234",
         ]
 
+
 @pytest.mark.parametrize("card_number, expected_mask", [
     (1234567812345678, "1234 56** **** 5678"),
     (4000123412345678, "4000 12** **** 5678"),
@@ -27,6 +31,7 @@ def invalid_card_numbers():
 ])
 def test_valid_card_numbers(valid_card_numbers, card_number, expected_mask):
     assert get_mask_card_number(card_number) == expected_mask
+
 
 @pytest.mark.parametrize("card_number", [
     -1234567812345678,

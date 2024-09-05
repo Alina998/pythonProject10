@@ -4,7 +4,7 @@ def get_mask_account(b: int) -> str:
 
     # Проверка на корректность типа данных
     if not isinstance(b, (int, str)):
-        raise TypeError('Некорректные данные')
+        raise TypeError("Некорректные данные")
 
     number_in_str = str(b)
 
