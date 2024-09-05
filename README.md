@@ -13,3 +13,6 @@
 - Проверка, что функция корректно обрабатывает входные строки, где номер счета меньше ожидаемой длины.
 
 #### Подробнее с проектом можно ознакомиться на [GitHub](https://github.com/Alina998/pythonProject10).
+
+## Спасибо за внимание!
+![Это вы](https://flomaster.top/uploads/posts/2023-01/1674263752_flomaster-club-p-milie-risunki-koshki-pinterest-4.png)
