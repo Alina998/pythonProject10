@@ -14,4 +14,4 @@ def get_mask_card_number(a: int) -> str:
     mask_card_number = number_in_str[:6] + (len(number_in_str[6:-4]) * "*") + number_in_str[-4:]
     parts_of_number, parts_size = len(mask_card_number), len(mask_card_number) // 4
 
-    return " ".join([mask_card_number[i: i + parts_size] for i in range(0, parts_of_number, parts_size)])
+    return " ".join([mask_card_number[i : i + parts_size] for i in range(0, parts_of_number, parts_size)])

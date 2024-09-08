@@ -18,6 +18,4 @@ def sort_by_date(data: list, descending=True):
         except ValueError:
             raise ValueError("Некорректные данные")
 
-    return sorted(
-        data, key=lambda x: datetime.fromisoformat(x["date"]), reverse=descending
-    )
+    return sorted(data, key=lambda x: datetime.fromisoformat(x["date"]), reverse=descending)
